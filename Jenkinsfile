@@ -6,10 +6,11 @@ pipeline {
       }
     triggers {
         pollSCM '* * * * *'
-        environment{
+        
+    }
+    environment {
             VENV_DIR='myapp/venv'
         }
-    }
     stages {
         stage('Build') {
             steps {
